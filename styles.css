@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: #faf9f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background: #1e2a3a;
+  color: #ecf0f1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+}
+
+.logo-side {
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 1px solid #34495e;
+}
+
+.logo-side a {
+  text-decoration: none;
+}
+
+.logo-side h1 {
+  font-size: 1.8rem;
+  color: #e67e22;
+  letter-spacing: 1px;
+}
+
+.logo-side p {
+  color: #bdc3c7;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.side-nav {
+  padding: 20px 0;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin: 5px 0;
+}
+
+.side-nav a {
+  display: block;
+  padding: 12px 25px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.side-nav a:hover {
+  background: #e67e22;
+  padding-left: 35px;
+}
+
+.side-nav .active {
+  background: #e67e22;
+}
+
+.submenu-side {
+  list-style: none;
+  padding-left: 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.side-nav li:hover .submenu-side {
+  max-height: 300px;
+}
+
+.submenu-side a {
+  padding: 8px 25px;
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+.submenu-side a:hover {
+  color: #e67e22;
+  background: transparent;
+  padding-left: 35px;
+}
+
+.top-icons-side {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border-top: 1px solid #34495e;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-icons-side a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.top-icons-side a:hover {
+  color: #e67e22;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 0;
+}
+
+.hero-side {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.hero-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-side p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1e2a3a;
+  margin-bottom: 30px;
+  border-left: 4px solid #e67e22;
+  padding-left: 20px;
+}
+
+.product-grid-side {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.product-card-side {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card-side:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-card-side img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #ecf0f1;
+}
+
+.product-card-side h3 {
+  padding: 15px 15px 5px;
+  color: #1e2a3a;
+}
+
+.product-card-side p {
+  padding: 0 15px;
+  color: #e67e22;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-side {
+  display: inline-block;
+  background: #e67e22;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 15px;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-side:hover {
+  background: #d35400;
+}
+
+.mto-side {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.steps-side {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.step-side {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.step-side:hover {
+  transform: scale(1.05);
+}
+
+.step-side .num {
+  background: #e67e22;
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 45px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.floating-buttons-side {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.float-btn {
+  background: #1e2a3a;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.float-btn:hover {
+  background: #e67e22;
+  transform: scale(1.1);
+}
+
+.whatsapp-side {
+  background: #25D366;
+}
+
+.whatsapp-side:hover {
+  background: #128C7E;
+}
+
+.footer-side {
+  background: #1e2a3a;
+  color: #bdc3c7;
+  padding: 40px 0 20px;
+  margin-top: 50px;
+  border-radius: 15px 15px 0 0;
+}
+
+.footer-grid-side {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-side h4 {
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+.footer-side ul {
+  list-style: none;
+}
+
+.footer-side ul li {
+  margin-bottom: 8px;
+}
+
+.footer-side a {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+.footer-side a:hover {
+  color: #e67e22;
+}
+
+.newsletter-side input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #34495e;
+  color: white;
+}
+
+.newsletter-side input::placeholder {
+  color: #95a5a6;
+}
+
+.newsletter-side button {
+  background: #e67e22;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.social-side {
+  display: flex;
+  gap: 15px;
+}
+
+.social-side a {
+  font-size: 1.4rem;
+}
+
+.copyright-side {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #34495e;
+  font-size: 0.85rem;
+}
+
+.video-side {
+  width: 100%;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .app-wrapper {
+      flex-direction: column;
+  }
+  
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+  
+  .top-icons-side {
+      position: relative;
+      bottom: auto;
+      margin-top: 20px;
+  }
+  
+  .hero-side h2 {
+      font-size: 1.8rem;
+  }
+  
+  .steps-side {
+      gap: 15px;
+  }
+  
+  .step-side {
+      width: 150px;
+  }
+}
